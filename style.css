@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+:root{
+    --light: hsl(0, 0%, 100%);
+    --olympic: hsl(200, 100%, 39%);
+    --margin: 0 20% 0 5%;
+    --marginMobile: 0 0%;
+    --searchElementHeight: 40px;
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body{
+    position: relative;
+    background-color: whitesmoke;
+    height: auto;
+    overflow-x: hidden;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--olympic);
+    box-shadow: 0 2px 2px 2px gray, 0 2px 1px 1px rgb(126, 126, 126);
+    z-index: 98;
+}
+
+.mainNavBar.top{
+    margin: var(--margin);
+    display: flex;
+    width: 75%;
+    height: 80px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 99;
+}
+
+.mainNavBar{
+    margin: var(--margin);
+    display: flex;
+    width: 75%;
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 99;
+}
+
+.mainNavBar__button{
+    display: none;
+    width: 37px;
+    height: 37px;
+    background: none; 
+    outline: none;
+    border: none;
+    appearance: none;
+    user-select: none;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.mainNavBar__span{
+    margin-top: 7px;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: white;
+    border-radius: 6px;
+    transition: all .4s;
+}
+
+.mainNavBar__button.active .mainNavBar__span:nth-child(1){
+    transform: translate(0px, 7px) rotate(45deg);
+    background: red;
+}
+
+.mainNavBar__button.active .mainNavBar__span:nth-child(2){
+    opacity: 0;
+}
+
+.mainNavBar__button.active .mainNavBar__span:nth-child(3){
+    transform: translate(0px, -17px) rotate(-45deg);
+    background: red;
+}
+
+/* .mainNavBar__button.active:hover .mainNavBar__span{
+    width: 100%;
+} */
+
+.logo{
+    color: var(--light);
+    font-family: 'Staatliches', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 1px gray;
+    letter-spacing: 4px;
+}
+
+.searchBox{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.searchBox__input--search{
+    padding: 0 var(--searchElementHeight) 0 15px;
+    width: 300px;
+    height: var(--searchElementHeight);
+    border: none;
+    border-radius: var(--searchElementHeight);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    outline: none;
+}
+
+.searchBox__button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--searchElementHeight);
+    height: var(--searchElementHeight);
+    background: rgb(221, 0, 0);
+    border: none;
+    border-radius: var(--searchElementHeight);
+    outline: none;
+    user-select: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.arrow{
+    margin-left: 10px;
+    display: none;
+    width: 10px;
+    height: 10px;
+    border-left: 0.2rem solid black;
+    border-bottom: .2rem solid black;
+    transform: translateY(20%) rotate(135deg);
+}
+
+
+.menu{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.menu, .menu__ul, .menu__li{
+    height: 100%;
+}
+
+.menu__ul, .menu__li{
+    display: flex;
+}
+
+.menu__li{
+    margin: 0 10px;
+    padding: 0 10px;
+    align-items: center;
+}
+
+.menu__a{
+    color: var(--light);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: capitalize;
+}
+
+
+.subMenu{
+    position: absolute;
+    display: none;
+    margin: var(--margin);
+    width: 75%;
+    top: 100%;
+    left: 0;
+    background:var(--light);
+    justify-content: space-around;
+}
+
+.subMenuCol{
+    margin: 15px;
+}
+
+.subMenuCol__h2{
+    text-align: center;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+
+.subMenuCol__li{
+    padding: 10px 0;
+    text-align: center;
+}
+
+.subMenuCol__a{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.subMenuCol__a:hover{
+    text-decoration: underline;
+}
+
+.menu__li:hover .subMenu{
+    display: flex;
+}
+
+@media screen and (max-width: 1000px){
+    .mainNavBar.top{
+        width: 90%;
+        margin: var(--marginMobile);
+    }
+    .mainNavBar__button{
+        display: block;
+    }
+
+    .searchBox{
+        display: block;
+    }
+
+    .searchBox__input--search{
+        padding-left: 0;
+        width: 0;
+        transition: all 0.4s;
+    }
+
+    .searchBox.active .searchBox__input--search{
+        padding-left: 15px;
+        width: 100%;
+    }
+    
+    .menu{
+        position: absolute;
+        display: block;
+        top: 100%;
+        left: 100%;
+        width: 100%;
+        height: auto;
+        background: var(--light);
+        transition: all .5s ease-in-out;
+    }
+
+    .menu__ul{
+        flex-direction: column;
+    }
+
+    .menu__li{
+        margin: 0;
+        padding: 30px 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu__a{
+        color: black;
+    }
+
+    .menu__li:nth-child(even){
+        background: rgb(252, 252, 252);
+    }
+
+    .subMenu{
+        position: relative;
+        display: none;
+        margin: 0;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .subMenuCol{
+        margin: 0;
+    }
+    
+    .subMenuCol__h2{
+        margin: 10px 0;
+    }
+    
+    
+    .subMenuCol__a{
+        font-size: 23px;
+    }
+
+    .arrow{
+        display: inline-block;
+    }
+
+    .mainNavBar__button.active ~ .menu{
+        left: 0;
+    }
+
+    .menu__li:hover .subMenu{
+        display: none;
+    }
+
+    .menu__li.active:hover .subMenu{
+        display: block;
+    }
+
+}

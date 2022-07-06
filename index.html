@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang = "pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class = "header">
+        <div class = "header-info"></div>
+        <nav class = "mainNavBar top">
+            <button class = "mainNavBar__button" id = "navbarBtn" role = "button">
+                <span class = "mainNavBar__span"></span>
+                <span class = "mainNavBar__span"></span>
+                <span class =  "mainNavBar__span"></span>
+            </button>
+
+            <a class = "logo" href = "#">ClotheStore</a>
+            
+            <div class = "searchBox" id = "searchBox">
+                <input class = "searchBox__input--search " type = "search" list = "searchItemsList" placeholder = "Search items...">
+                <button class = "searchBox__button" id = "searchBoxBtn" role = "button">&#128269</button>
+            </div>
+            
+            <div class = "menu">
+                <ul class = "menu__ul">
+                    <li class = "menu__li">
+                        <a class = "menu__a" href = "">home</a>
+                    </li>
+                    <li class = "menu__li">
+                        <a class = "menu__a" href = "">sale</a>
+                    </li>
+                    <li class = "menu__li" id = "d1">
+                        <a class = "menu__a" href = "">
+                            women 
+                            <div class = "arrow"></div>
+                        </a>
+                        
+                        <div class = "subMenu"> 
+                            <div class = "subMenuCol">
+                                <header class = "subMenuCol__header">
+                                    <h2 class = "subMenuCol__h2">Upper clothes</h2>
+                                </header>
+                                <ul class = "subMenuCol__ul">
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">dress</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">t-shirt</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">shirt</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">coat</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">hat</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class = "subMenuCol">
+                                <header class = "subMenuCol__header">
+                                    <h2 class = "subMenuCol__h2">Accessories</h2>
+                                </header>
+                                <ul class = "subMenuCol__ul">
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">bra</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">glasses</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">handbag</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">thong</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <!-- <div class = "subMenu">
+                           
+
+                            <div class = "subMenuCol">
+                                <header class = "subMenuCol__header">
+                                    <h2 class = "subMenuCol__h2">Lower clothes</h2>
+                                </header>
+                                <ul class = "subMenuCol__ul">
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">skirt</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">leggi</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">jeans</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">short</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">pants</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class = "subMenuCol">
+                                <header class = "subMenuCol__header">
+                                    <h2 class = "subMenuCol__h2">Accessories</h2>
+                                </header>
+                                <ul class = "subMenuCol__ul">
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">bra</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">glasses</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">handbag</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">thong</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> -->
+                    </li>
+                    <li class = "menu__li" id = "d2">
+                        <a class = "menu__a" href = "">
+                            men
+                            <div class = "arrow"></div>
+                        </a>
+                        <!-- <div class = "subMenu">
+                            <div class = "subMenuCol">
+                                <header class = "subMenuCol__header">
+                                    <h2 class = "subMenuCol__h2">Upper clothes</h2>
+                                </header>
+                                <ul class = "subMenuCol__ul">
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">dress</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">t-shirt</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">shirt</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">coat</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">hat</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class = "subMenuCol">
+                                <header class = "subMenuCol__header">
+                                    <h2 class = "subMenuCol__h2">Lower clothes</h2>
+                                </header>
+                                <ul class = "subMenuCol__ul">
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">skirt</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">leggi</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">jeans</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">short</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">pants</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class = "subMenuCol">
+                                <header class = "subMenuCol__header">
+                                    <h2 class = "subMenuCol__h2">Accessories</h2>
+                                </header>
+                                <ul class = "subMenuCol__ul">
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">bra</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">glasses</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">handbag</a>
+                                    </li>
+                                    <li class = "subMenuCol__li">
+                                        <a class = "subMenuCol__a" href = "#">thong</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> -->
+                    </li>
+                    <li class = "menu__li" id = "d3">
+                        <a class = "menu__a" href = "">
+                            kids
+                            <div class = "arrow"></div>
+                        </a>
+                        <div class = "subMenu"></div> 
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <script src = "navbarFunction.js"></script>
+    <datalist id = "searchItemsList">
+        <option value = "T-shirt">Women, Men</option>
+        <option value = "Pants">Women, Men</option>
+        <option value = "Dress">Women</option>
+    </datalist>
+</body>
+</html>
